@@ -1,0 +1,14 @@
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib
+seaborn
+tensorflow
+mlflow
+dvc
+fastapi
+unicorn[standard]
+pytest 
+flake8
+streamlit

@@ -1,0 +1,27 @@
+# config.yaml
+data:
+  raw_path: data/raw/insurance.csv
+  train_path: data/processed/train.csv
+  test_path: data/processed/test.csv
+  target_column: charges
+  categorical_features: ["sex", "smoker", "region"]
+  numerical_features: ["age", "bmi", "children"]
+
+model:
+  name: RandomForestRegressor # or LinearRegression, SVR, etc.
+  params:
+    n_estimators: 100
+    random_state: 42
+  path: models/trained_model.pkl # Path where the trained model will be saved
+
+api:
+  host: 0.0.0.0
+  port: 8000
+
+# MLOps specific configurations (optional)
+mlflow:
+  tracking_uri: file:///mlruns # Or a remote MLflow server URI
+  experiment_name: Insurance_Cost_Prediction
+
+dvc:
+  remote_url: https://your-dvc-remote-storage-bucket # S3, GCS, Azure Blob, etc.

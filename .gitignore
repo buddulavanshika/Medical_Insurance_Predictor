@@ -1,0 +1,27 @@
+# .gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Specific to MLOps
+*.pkl # Trained model files
+*.joblib
+mlruns/ # MLflow local tracking folder
+.dvc/cache/ # DVC cache
+data/processed/ # Processed data (unless you want to version it with Git, use DVC instead)
+# data/raw/ # Raw data (if too large for Git, use DVC)
+
+# OS and IDE specific
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+*.log
